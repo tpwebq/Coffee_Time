@@ -1,0 +1,35 @@
+@include aoa-bg-series($img__classes,$img__aoa,0,"center","cover","scroll");
+
+.bg{
+    &-orange{
+        background-color: $color__orange!important;
+    }
+    &-violet{
+        background-color: $color__violet!important;
+    }
+}
+.border{
+    &-orange{
+        border-color: $color__orange!important;
+    }
+    &-violet{
+        border-color: $color__violet!important;
+    }
+}
+.privacy{
+    &-s1{
+        background-position-x: center!important;
+    }
+}
+
+.text{
+    &-orange{
+        color: $color__orange!important;
+    }
+    &-shadow{
+        text-shadow: $text__shadow;
+    }
+    &-violet{
+        color: $color__violet!important;
+    }
+}
