@@ -1,14 +1,32 @@
 @include aoa-bg-series($img__classes,$img__aoa,0,"center","cover","scroll");
-
+@media all and (max-width:991px), all and (orientation: portrait){
+    @include aoa-bg-series($img__classes--v,$img__aoa--v,0,"center","cover","scroll");
+    .index{
+        &-s1{
+            background-position-y: bottom!important;
+        }
+    }
+}
+.about{
+    &-s1,&-s2{
+        background-position-x: right!important;
+    }
+}
 .bg{
+    &-brown{
+        background-color: $color__brown;
+    }
     &-orange{
-        background-color: $color__orange!important;
+        background-color: $color__orange;
     }
     &-violet{
-        background-color: $color__violet!important;
+        background-color: $color__violet;
     }
 }
 .border{
+    &-brown{
+        border-color: $color__brown!important;
+    }
     &-orange{
         border-color: $color__orange!important;
     }
@@ -16,9 +34,34 @@
         border-color: $color__violet!important;
     }
 }
+.contact{
+    &-s1{
+        background-position-x: right!important;
+    }
+    &-s2{
+        background-color: #ccc!important;
+        background-blend-mode: overlay;
+    }
+}
+.index{
+    &-s1{
+        background-position-y: center!important;
+    }
+}
+.menu,.basket{
+    &-s2{
+        background-color: #ccc!important;
+        background-blend-mode: overlay;
+    }
+}
 .navbar{
     &-logo{
         height: $logo__height;
+    }
+}
+.opacity{
+    &-8{
+        opacity: 0.8;
     }
 }
 .privacy{
@@ -28,6 +71,9 @@
 }
 
 .text{
+    &-brown{
+        color: $color__brown!important;
+    }
     &-orange{
         color: $color__orange!important;
     }
@@ -47,9 +93,14 @@ textarea{
 @media all and (max-width:767px){
     .navbar{
         &-nav{
+            & .nav-item:hover{
+                *{
+                    color: $color__orange!important;
+                }
+            }
             backdrop-filter: blur(5px); 
-            background-color: #fff;
-            border: 1px solid #999;
+            background-color: $color__violet;
+            border: 1px solid #111;
             opacity: 0.9;
             padding: 10px;
         }
